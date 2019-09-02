@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    border: 1px solid darkgray;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited { 
+    color: black;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding:15px;
+}
+
+header div {
+    /* padding:15px; */
+}
+
+#squares-icon {
+    display: grid;
+    grid-template: repeat(3, 4px) / repeat(3, 4px);
+    grid-gap: 2px;
+    padding: 7px;
+}
+
+#squares-icon div {
+    background-color: black;
+    height: 5px;
+    width: 5px;
+}
+
+#d-circle div {
+    height: 32px;
+    width: 32px;
+    border-radius: 16px;
+    border: 1px solid blue;
+    background-color: blue;
+}
+
+#d-circle div h3 {
+    color:white;
+    text-align:center;
+    position: relative;
+    text-decoration: none !important;
+}
+
+main {
+    width:100%;
+}
+
+.block {
+    display:block;
+    margin: 0 auto;
+}
+
+input {
+    width:500px;
+    height: 2em;
+    border-radius: 1em;
+}
+
+#buttons {
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+button {
+    border:1px solid lightgray;
+    color:gray;
+    background-color:lightgray;
+    padding:10px;
+    margin:30px 7px;
+    border-radius: 4px;
+    display:block;
+}
+
+button:hover {
+    border: 1px solid gray;
+    color:black;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    width: 100%;
+    background-color:lightgray;
+    border: 1px solid darkgray;
+    padding:15px;
+}
+
+footer a {
+    padding:15px;
+}
