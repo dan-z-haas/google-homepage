@@ -1,7 +1,15 @@
+html {
+    min-height: 100%;
+    margin:0;
+    padding:0;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9em;
-    height:100%;
+    font-size: 0.8em;
+    height: 100vh;
+    margin:0;
+    padding:0;
     display: flex;
     flex-direction: column;
     align-content: space-between;
@@ -22,12 +30,26 @@ a:hover {
 
 header {
     display: flex;
+    width:100%;
     justify-content: space-between;
-    padding:15px;
+    padding:10px;
+    margin: 0 0 auto 0;
+    box-sizing: border-box;
 }
 
-header div {
-    /* padding:15px; */
+header > div {
+    height:32px;
+}
+
+header > div > a {
+    margin:15px;
+    display : inline-block;
+    vertical-align : middle;
+}
+
+#right-header {
+    display: flex;
+    flex-direction:row;
 }
 
 #squares-icon {
@@ -35,31 +57,41 @@ header div {
     grid-template: repeat(3, 4px) / repeat(3, 4px);
     grid-gap: 2px;
     padding: 7px;
+    position:relative;
+    bottom:10px;
 }
 
 #squares-icon div {
     background-color: black;
     height: 5px;
     width: 5px;
+    padding: 0px;
 }
 
-#d-circle div {
-    height: 32px;
-    width: 32px;
-    border-radius: 16px;
+#d-circle:hover {
+    text-decoration: none;
+}
+
+#d-circle-div {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
     border: 1px solid blue;
     background-color: blue;
+    position:relative;
+    bottom:8px;
 }
 
-#d-circle div h3 {
+#d-circle-div > h3 {
     color:white;
     text-align:center;
     position: relative;
-    text-decoration: none !important;
+    padding:25%;
 }
 
 main {
     width:100%;
+    margin: auto 0;
 }
 
 .block {
@@ -68,9 +100,10 @@ main {
 }
 
 input {
-    width:500px;
+    width:480px;
     height: 2em;
     border-radius: 1em;
+    box-sizing: border-box;
 }
 
 #buttons {
@@ -87,6 +120,7 @@ button {
     margin:30px 7px;
     border-radius: 4px;
     display:block;
+    font-size:1em;
 }
 
 button:hover {
@@ -97,13 +131,14 @@ button:hover {
 footer {
     display: flex;
     justify-content: space-between;
-    bottom: 0;
+    box-sizing:border-box;
     width: 100%;
     background-color:lightgray;
     border: 1px solid darkgray;
     padding:15px;
+    margin: auto 0 0 0;
 }
 
-footer a {
-    padding:15px;
+footer > div > a {
+    margin:15px;
 }
